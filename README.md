@@ -1,3 +1,5 @@
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/new/template/speedtest-tracker-1?utm_medium=integration&utm_source=button&utm_campaign=speedtest-tracker)
+
 # Speedtest Tracker on Railway
 
 This repo packages [Speedtest Tracker](https://github.com/alexjustesen/speedtest-tracker) for Railway. Speedtest Tracker runs Ookla speed tests on a schedule or on demand and keeps the history, charts and alerts in a web dashboard.
