@@ -25,7 +25,7 @@ The `Dockerfile` also sets `DB_CONNECTION=sqlite`, `FORCE_HTTPS=true`, `APP_NAME
 - `PRUNE_RESULTS_OLDER_THAN`: delete results older than this many days.
 - `DISPLAY_TIMEZONE`, `PUBLIC_DASHBOARD`, `SPEEDTEST_SERVERS`.
 
-**Note on what it measures.** On Railway, the tests measure the internet connection of the Railway server the app runs on, not your home connection. Each test downloads and uploads data, and Railway bills outbound traffic, so pick a modest schedule.
+**Note on what it measures.** On Railway, the tests measure the internet connection of the Railway server the app runs on, not your home connection. Railway's network is fast (a test from this template measured 7.7 Gbps down and 2.5 Gbps up), so one test can upload gigabytes, and Railway bills outbound traffic. Pick a modest schedule.
 
 ## Updates
 
