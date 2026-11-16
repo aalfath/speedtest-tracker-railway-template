@@ -16,6 +16,7 @@ This repo packages [Speedtest Tracker](https://github.com/alexjustesen/speedtest
 | `ADMIN_PASSWORD` | `${{secret(24)}}` | Password of the first admin account, generated at deploy. Read it in the service's Variables tab, then change it in the app's profile page. Used only on the first start |
 | `APP_KEY` | `${{secret(32)}}` | Laravel encryption key. Keep it: changing it makes stored secrets unreadable |
 | `APP_URL` | `https://${{RAILWAY_PUBLIC_DOMAIN}}` | Public URL used in links and notifications |
+| `ASSET_URL` | `https://${{RAILWAY_PUBLIC_DOMAIN}}` | Base URL for static files, so they load over https behind Railway's proxy |
 | `PORT` | `80` | Port the app listens on, used by Railway's domain and health check |
 
 The `Dockerfile` also sets `DB_CONNECTION=sqlite`, `FORCE_HTTPS=true`, `APP_NAME` and `ADMIN_NAME`. Every setting in the [environment variable list](https://docs.speedtest-tracker.dev/getting-started/environment-variables) can be added as a service variable, for example:

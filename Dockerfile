@@ -5,8 +5,9 @@ FROM lscr.io/linuxserver/speedtest-tracker:v1.15.1-ls181@sha256:b7833e43bcf53859
 
 # Fixed settings. Every one can be overridden with a service variable.
 # SQLite lives in /config (mount a volume there).
-# FORCE_HTTPS: Railway serves the app over HTTPS only, so every generated
-# link uses https (without it the favicon link is http and gets blocked).
+# FORCE_HTTPS: Railway serves the app over HTTPS only, so generated links use
+# https. The template also sets ASSET_URL to the public https URL, because the
+# panel's favicon link is built before the proxy headers are read.
 ENV DB_CONNECTION=sqlite \
     APP_NAME="Speedtest Tracker" \
     ADMIN_NAME=Admin \
