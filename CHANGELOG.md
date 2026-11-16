@@ -2,4 +2,4 @@
 
 ## 1.15.1 (2026-11-16)
 
-- First release: Speedtest Tracker v1.15.1 (`lscr.io/linuxserver/speedtest-tracker:v1.15.1-ls181`, pinned by digest), SQLite on a `/config` volume, generated `APP_KEY` and admin password, health check on `/api/healthcheck`.
+- First release: Speedtest Tracker v1.15.1 (`lscr.io/linuxserver/speedtest-tracker:v1.15.1-ls181`, pinned by digest), SQLite on a `/config` volume, generated `APP_KEY` and admin password, health check on `/api/healthcheck`, `FORCE_HTTPS=true` so every link uses https behind Railway's proxy.

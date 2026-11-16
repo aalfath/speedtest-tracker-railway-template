@@ -18,7 +18,7 @@ This repo packages [Speedtest Tracker](https://github.com/alexjustesen/speedtest
 | `APP_URL` | `https://${{RAILWAY_PUBLIC_DOMAIN}}` | Public URL used in links and notifications |
 | `PORT` | `80` | Port the app listens on, used by Railway's domain and health check |
 
-The `Dockerfile` also sets `DB_CONNECTION=sqlite`, `APP_NAME` and `ADMIN_NAME`. Every setting in the [environment variable list](https://docs.speedtest-tracker.dev/getting-started/environment-variables) can be added as a service variable, for example:
+The `Dockerfile` also sets `DB_CONNECTION=sqlite`, `FORCE_HTTPS=true`, `APP_NAME` and `ADMIN_NAME`. Every setting in the [environment variable list](https://docs.speedtest-tracker.dev/getting-started/environment-variables) can be added as a service variable, for example:
 
 - `SPEEDTEST_SCHEDULE`: a cron expression for automatic tests, such as `0 */6 * * *` (every 6 hours). Without it, tests only run when you start them from the dashboard.
 - `PRUNE_RESULTS_OLDER_THAN`: delete results older than this many days.
